@@ -311,6 +311,103 @@ h1, h2, h3, h4, h5, h6 {
   padding: 13px 35px;
 }
 
+.product {
+  padding: 70px 10px;
+}
+.product__first-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.product__title {
+  color: #1C1C1C;
+  font-size: 30px;
+  font-weight: 400;
+  position: relative;
+  margin-left: 41px;
+  margin-bottom: 30px;
+}
+.product__title::before {
+  content: url("../img/product-icon.svg");
+  display: block;
+  height: 43px;
+  width: 31px;
+  position: absolute;
+  top: 50%;
+  left: -41px;
+  transform: translate(0, -50%);
+}
+.product__btns {
+  margin-bottom: 30px;
+}
+.product__btn-left, .product__btn-right {
+  position: relative;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.product__btn-left::before, .product__btn-right::before {
+  content: url("../img/arrow.svg");
+  display: block;
+  position: absolute;
+  top: 53%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
+.product__btn-right {
+  margin-left: 10px;
+}
+.product__btn-right::before {
+  content: url("../img/arrow2.svg");
+  display: block;
+  position: absolute;
+  top: 53%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+}
+.product-slider__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.product-slider__item {
+  text-decoration: none;
+  color: #1C1C1C;
+}
+.product-slider__img {
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 315px;
+}
+.product-slider__img img {
+  width: 100%;
+  padding: 0 11px;
+}
+.product-slider__title {
+  color: #1C1C1C;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.32px;
+  margin-top: 15px;
+}
+.product-slider__desc {
+  color: #1C1C1C;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 936px;
@@ -346,6 +443,12 @@ h1, h2, h3, h4, h5, h6 {
   .categories-card__btn {
     width: 160px;
     font-size: 12px;
+  }
+  .product-slider__title {
+    font-size: 14px;
+  }
+  .product-slider__desc {
+    font-size: 16px;
   }
 }
 @media (max-width: 992px) {
@@ -488,6 +591,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 90%;
   }
   .about__subtitle {
+    font-size: 24px;
+  }
+  .product__title {
     font-size: 24px;
   }
 }
