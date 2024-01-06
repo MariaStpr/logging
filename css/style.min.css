@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .promo {
-  background: url("../img/header.jpg") right/cover no-repeat;
+  background: url("../img/main-page/header.jpg") right/cover no-repeat;
   min-height: 650px;
   position: relative;
   z-index: 1;
@@ -257,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about {
   padding: 0 10px;
-  background: url("../img/about-bg.png") right/cover no-repeat;
+  background: url("../img/main-page/about-bg.png") right/cover no-repeat;
   position: relative;
   z-index: 1;
 }
