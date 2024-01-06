@@ -512,6 +512,132 @@ h1, h2, h3, h4, h5, h6 {
   padding: 13px 20px;
 }
 
+.menu {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  background: #1C1C1C;
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.43);
+  width: 276px;
+  height: 650px;
+  top: 0;
+  right: 0;
+  color: #fff;
+}
+.menu__close {
+  position: absolute;
+  top: 35px;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: -35px;
+}
+.menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 27px 23px;
+  height: 90%;
+}
+.menu__wrapper input {
+  width: 230px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #BCCAD2;
+  background: #1C1C1C;
+}
+.menu__search-input {
+  position: relative;
+}
+.menu__search-input input {
+  color: #fff;
+}
+.menu__search-input::after {
+  content: url("../img/search.svg");
+  display: block;
+  width: 16.39px;
+  height: 16.39px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+.menu ul {
+  padding: 0;
+}
+.menu ul li {
+  list-style: none;
+}
+.menu__tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 25px 0 0 0;
+}
+.menu__catalog {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 132.5%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+}
+.menu__catalog.active {
+  color: #8BAF13;
+  border-bottom: 2px solid #8BAF13;
+}
+.menu__footer-time, .menu__footer-tel {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 132.5%;
+  letter-spacing: 0.07px;
+  margin-top: 10px;
+}
+.menu__footer-time span, .menu__footer-tel span {
+  font-weight: 300;
+}
+.menu__footer-btn {
+  padding: 13px 43px;
+  line-height: 132.5%;
+  letter-spacing: 0.7px;
+  margin-top: 15px;
+}
+
+.catalog-list {
+  margin-top: 25px;
+}
+.catalog-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.catalog-list__item {
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 132.5%;
+  letter-spacing: 0.07px;
+}
+
+.block-list {
+  margin-top: 10px;
+  display: none;
+}
+.block-list__items {
+  display: flex;
+  flex-direction: column;
+}
+.block-list__item {
+  padding: 15px 0;
+  border-bottom: 1px solid #414141;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 936px;
@@ -581,6 +707,9 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 720px;
   }
   .hamburger {
+    display: block;
+  }
+  .menu {
     display: block;
   }
   .promo .header__menu li:not(:first-child) {
