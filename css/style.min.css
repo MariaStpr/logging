@@ -192,6 +192,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.1);
   bottom: 0;
   z-index: 2;
+  background-color: #fff;
 }
 
 .categories-card {
@@ -199,6 +200,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   background: #FFF;
   overflow: hidden;
+  border-radius: 4px;
 }
 .categories-card:not(:last-child)::after {
   content: "";
@@ -214,26 +216,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 .categories-card__wrapper {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 70px 70px 95px 85px;
   width: 90%;
   height: 309px;
-  padding: 86px 40px 42px 40px;
+  padding: 77px 40px 42px 40px;
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -30%);
 }
+.categories-card__wrapper.active {
+  background: #000;
+  height: 100%;
+  z-index: 5;
+  padding: 77px 39px 35px 39px;
+  border-radius: 4px;
+}
 .categories-card__image {
   margin: 0 auto;
 }
 .categories-card__btn {
-  width: 195px;
+  width: 100%;
   padding: 14px 0;
   font-size: 14px;
   font-weight: 500;
   line-height: 132.5%;
   letter-spacing: 0.07px;
-  margin: 38px auto 0 auto;
+  margin: 38px 0 0 0;
 }
 .categories-card__title {
   color: #313131;
@@ -521,7 +530,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 276px;
   height: 650px;
   top: 0;
-  right: 0;
+  right: -30%;
   color: #fff;
 }
 .menu__close {
@@ -579,7 +588,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-around;
   margin: 25px 0 0 0;
 }
-.menu__catalog {
+.menu__catalog, .menu__block {
   width: 100%;
   text-align: center;
   font-size: 14px;
@@ -589,7 +598,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   border-bottom: 2px solid #fff;
 }
-.menu__catalog.active {
+.menu__catalog.active, .menu__block.active {
   color: #8BAF13;
   border-bottom: 2px solid #8BAF13;
 }
@@ -660,9 +669,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 936px;
   }
   .categories-card__wrapper {
-    height: 200px;
+    height: 230px;
     padding: 45px 10px 35px 10px;
-    grid-template-rows: 75px 60px 100px 80px;
+    grid-template-rows: 75px 65px 125px 40px;
   }
   .categories-card__title {
     font-size: 16px;
@@ -671,8 +680,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
   }
   .categories-card__btn {
-    width: 160px;
     font-size: 12px;
+    margin: 0;
   }
   .product-slider__title {
     font-size: 14px;
@@ -709,9 +718,6 @@ h1, h2, h3, h4, h5, h6 {
   .hamburger {
     display: block;
   }
-  .menu {
-    display: block;
-  }
   .promo .header__menu li:not(:first-child) {
     display: none;
   }
@@ -725,7 +731,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 550px;
   }
   .categories {
-    height: 400px;
+    height: 330px;
   }
   .categories__wrapper {
     grid-template-columns: repeat(6, 1fr);
@@ -741,13 +747,16 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-end: 6;
   }
   .categories-card {
-    height: 270px;
+    height: 235px;
     grid-column: span 2;
   }
   .categories-card__wrapper {
-    padding: 20px 10px 35px 10px;
+    padding: 20px 10px 0px 10px;
     height: 215px;
-    grid-template-rows: 70px 55px 105px 60px;
+    grid-template-rows: 70px 60px 86px 40px;
+  }
+  .categories-card__wrapper.active {
+    padding: 50px 25px 42px 39px;
   }
   .footer__wrapper {
     grid-template-columns: 1fr;
@@ -797,6 +806,7 @@ h1, h2, h3, h4, h5, h6 {
   .categories__wrapper {
     grid-template-columns: repeat(6, 1fr);
     width: 540px;
+    padding-bottom: 21px;
   }
   .about::before {
     width: 60%;
@@ -856,7 +866,10 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-end: 4;
   }
   .categories-card__wrapper {
-    padding: 20px 6px 35px 6px;
+    padding: 20px 6px 0px 6px;
+  }
+  .categories-card__wrapper.active {
+    padding: 42px 10px;
   }
   .categories-card__title {
     font-size: 14px;
@@ -865,8 +878,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 11px;
   }
   .categories-card__btn {
-    width: 100px;
-    font-size: 8px;
+    font-size: 10px;
   }
   .about::before {
     width: 70%;
