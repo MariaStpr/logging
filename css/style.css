@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .categories-card__wrapper.active {
   background: #000;
-  height: 100%;
+  height: max-content;
   z-index: 5;
   padding: 77px 39px 35px 39px;
   border-radius: 4px;
@@ -540,8 +540,9 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 3;
   background: #1C1C1C;
   box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.43);
-  width: 276px;
-  height: 650px;
+  max-width: 40%;
+  min-height: 505px;
+  height: 100vh;
   top: 0;
   right: -30%;
   color: #fff;
@@ -575,6 +576,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .menu__search-input input {
   color: #fff;
+  width: 100%;
 }
 .menu__search-input::after {
   content: url("../img/search.svg");
@@ -638,13 +640,17 @@ h1, h2, h3, h4, h5, h6 {
 .catalog-list__items {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  row-gap: 30px;
+  column-gap: 0px;
+  flex-wrap: wrap;
+  max-height: 300px;
 }
 .catalog-list__item {
   font-size: 14px;
   font-weight: 350;
   line-height: 132.5%;
   letter-spacing: 0.07px;
+  margin: 0 15px;
 }
 
 .block-list {
@@ -775,16 +781,16 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-end: 6;
   }
   .categories-card {
-    height: 235px;
+    height: 257px;
     grid-column: span 2;
   }
   .categories-card__wrapper {
     padding: 20px 10px 0px 10px;
-    height: 215px;
-    grid-template-rows: 70px 60px 86px 40px;
+    height: 237px;
+    grid-template-rows: 70px 60px 110px 40px;
   }
   .categories-card__wrapper.active {
-    padding: 50px 25px 42px 39px;
+    padding: 55px 25px 42px 25px;
   }
   .footer__wrapper {
     grid-template-columns: 1fr;
@@ -830,6 +836,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .promo .banner__desc {
     max-width: 360px;
+  }
+  .menu {
+    max-width: 276px;
   }
   .categories__wrapper {
     grid-template-columns: repeat(6, 1fr);
@@ -893,7 +902,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 30px auto 0 auto;
   }
   .categories {
-    height: 618px;
+    height: 530px;
   }
   .categories__wrapper {
     grid-template-columns: repeat(4, 1fr);
@@ -909,11 +918,16 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-start: 2;
     grid-column-end: 4;
   }
+  .categories-card {
+    height: 235px;
+  }
   .categories-card__wrapper {
     padding: 20px 6px 0px 6px;
+    grid-template-rows: 70px 60px 85px 40px;
+    height: 215px;
   }
   .categories-card__wrapper.active {
-    padding: 42px 10px;
+    padding: 50px 10px 20px 10px;
   }
   .categories-card__title {
     font-size: 14px;
@@ -923,6 +937,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .categories-card__btn {
     font-size: 10px;
+    margin: 10px 0;
   }
   .about::before {
     width: 70%;
