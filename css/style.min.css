@@ -542,7 +542,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.43);
   max-width: 40%;
   min-height: 505px;
-  height: 100vh;
   top: 0;
   right: -30%;
   color: #fff;
